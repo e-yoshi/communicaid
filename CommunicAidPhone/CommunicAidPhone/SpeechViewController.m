@@ -9,7 +9,7 @@
 #import "SpeechViewController.h"
 
 @interface SpeechViewController ()
-
+@property (strong, nonatomic) NSMutableArray *arrayOfTexts;
 @end
 
 @implementation SpeechViewController
@@ -47,6 +47,7 @@
     [[PNObservationCenter defaultCenter] addMessageReceiveObserver:self
                                                          withBlock:^(PNMessage *message) {
                                                              
+                                                             if (![[message.message substringToIndex:1] isEqualToString:@"*"]) {
                                                              NSDateFormatter *dateFormatter = [NSDateFormatter new];
                                                              dateFormatter.dateFormat = @"HH:mm:ss MM/dd/yy";
                                                              
@@ -56,17 +57,30 @@
                                                                  
                                                                  messages = @"";
                                                              }
-                                                             messages = [messages stringByAppendingFormat:@"<%@> %@\n",
-                                                                         [dateFormatter stringFromDate:message.receiveDate.date],
+                                                             messages = [messages stringByAppendingFormat:@"%@\n",
                                                                          message.message];
                                                              [weakSelf.messages setValue:messages forKey:channel.name];
                                                              
-                                                             //weakSelf.currentChannelChat = [weakSelf.messages valueForKey:weakSelf.currentChannel.name];
+                                    [self.messageTextField setText:messages];
+                                                                 
+                                                                 NSRange range = NSMakeRange(self.messageTextField.text.length - 1, 1);
+                                                                 [self.messageTextField scrollRangeToVisible:range];//weakSelf.currentChannelChat = [weakSelf.messages valueForKey:weakSelf.currentChannel.name];
+                                                             }
                                                          }];
     
     
     [self connectToChannel];
 
+}
+@synthesize arrayOfTexts = _arrayOfTexts;
+- (NSMutableArray *)arrayOfTexts {
+    if (!_arrayOfTexts) {
+        _arrayOfTexts = [[NSMutableArray alloc]init];
+    }
+    return _arrayOfTexts;
+}
+- (void)setArrayOfTexts:(NSMutableArray *)arrayOfTexts
+{
 }
 
 -(void) connectToChannel{

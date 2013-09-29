@@ -67,7 +67,7 @@
 
                                                              [self.messageTextView setText:messages];
 
-                                                             //weakSelf.currentChannelChat = [weakSelf.messages valueForKey:weakSelf.currentChannel.name];
+                                                             weakSelf.currentChannelChat = [weakSelf.messages valueForKey:weakSelf.currentChannel.name];
                                                          }];
 }
 

@@ -11,7 +11,8 @@
 #import "SpeechAuth.h"
 #import "SpeechConfig.h"
 @interface SpeechViewController : UIViewController <ATTSpeechServiceDelegate, PNDelegate>
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UITextView *messageTextField;
+@property ( pn_desired_weak, nonatomic) IBOutlet UITextView *textView;
 // Stores reference on PubNub client configuration
 @property (nonatomic, strong) PNConfiguration *configuration;
 
