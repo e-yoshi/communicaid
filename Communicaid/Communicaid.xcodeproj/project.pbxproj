@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BE5A0B917F7EE5600D2CDF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = Communicaid;
+			sourceTree = "<group>";
+		};
 		945EF8F617F7C4C400B5445F = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +99,7 @@
 				945EF92D17F7C4C400B5445F /* CommunicaidTests */,
 				945EF90117F7C4C400B5445F /* Frameworks */,
 				945EF90017F7C4C400B5445F /* Products */,
+				5BE5A0B917F7EE5600D2CDF5 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,6 +490,7 @@
 				945EF93917F7C4C400B5445F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		945EF93A17F7C4C400B5445F /* Build configuration list for PBXNativeTarget "CommunicaidTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +499,7 @@
 				945EF93C17F7C4C400B5445F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
