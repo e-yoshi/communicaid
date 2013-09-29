@@ -10,7 +10,14 @@
 #import "ATTSpeechKit.h"
 #import "SpeechAuth.h"
 #import "SpeechConfig.h"
-@interface SpeechViewController : UIViewController <ATTSpeechServiceDelegate>
+@interface SpeechViewController : UIViewController <ATTSpeechServiceDelegate, PNDelegate>
 @property (strong, nonatomic) IBOutlet UITextView *textView;
+// Stores reference on PubNub client configuration
+@property (nonatomic, strong) PNConfiguration *configuration;
 
+// Stores reference on current channel
+@property (nonatomic, strong) PNChannel *currentChannel;
+
+// Stores reference on dictionary which stores messages for each of channels
+@property (nonatomic, strong) NSMutableDictionary *messages;
 @end
