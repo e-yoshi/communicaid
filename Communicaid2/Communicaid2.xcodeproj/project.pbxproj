@@ -103,6 +103,8 @@
 		41F9F4BA17F8E4C9000CD34D /* PNConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F48417F8E4C9000CD34D /* PNConnectionChannel.m */; };
 		41F9F4BC17F8E5DE000CD34D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */; };
 		41F9F4BE17F8E5E8000CD34D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F4BD17F8E5E8000CD34D /* libz.dylib */; };
+		5B06A77617F8EF160039BF42 /* cashierImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B06A77417F8EF160039BF42 /* cashierImage.png */; };
+		5B06A77717F8EF160039BF42 /* customerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B06A77517F8EF160039BF42 /* customerImage.png */; };
 		5B497E4317F8DA5B002F120B /* CC_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */; };
 		5B497E4417F8DA5B002F120B /* CC_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4217F8DA5B002F120B /* CC_Icon.png */; };
 /* End PBXBuildFile section */
@@ -318,6 +320,8 @@
 		41F9F48417F8E4C9000CD34D /* PNConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNConnectionChannel.m; sourceTree = "<group>"; };
 		41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41F9F4BD17F8E5E8000CD34D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5B06A77417F8EF160039BF42 /* cashierImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cashierImage.png; sourceTree = "<group>"; };
+		5B06A77517F8EF160039BF42 /* customerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customerImage.png; sourceTree = "<group>"; };
 		5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CC_Icon@2x.png"; sourceTree = "<group>"; };
 		5B497E4217F8DA5B002F120B /* CC_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CC_Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +422,8 @@
 		41F9F23217F8AC92000CD34D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B06A77417F8EF160039BF42 /* cashierImage.png */,
+				5B06A77517F8EF160039BF42 /* customerImage.png */,
 				5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */,
 				5B497E4217F8DA5B002F120B /* CC_Icon.png */,
 				41F9F29817F8B73B000CD34D /* AlcoholIcon.png */,
@@ -826,12 +832,14 @@
 				41F9F28617F8B3D7000CD34D /* QueryIcon.png in Resources */,
 				41F9F28A17F8B3D7000CD34D /* PaymentIcon.png in Resources */,
 				41F9F26B17F8ADAA000CD34D /* Lucida Grande.ttf in Resources */,
+				5B06A77717F8EF160039BF42 /* customerImage.png in Resources */,
 				41F9F29F17F8B73B000CD34D /* DrugsIcon.png in Resources */,
 				41F9F28917F8B3D7000CD34D /* WelcomeIcon@2x.png in Resources */,
 				5B497E4317F8DA5B002F120B /* CC_Icon@2x.png in Resources */,
 				41F9F26E17F8ADD2000CD34D /* Main.storyboard in Resources */,
 				5B497E4417F8DA5B002F120B /* CC_Icon.png in Resources */,
 				41F9F29E17F8B73B000CD34D /* CigaretteIcon.png in Resources */,
+				5B06A77617F8EF160039BF42 /* cashierImage.png in Resources */,
 				41F9F23617F8AC92000CD34D /* InfoPlist.strings in Resources */,
 				41F9F28817F8B3D7000CD34D /* WelcomeIcon.png in Resources */,
 				41F9F29C17F8B73B000CD34D /* AlcoholIcon.png in Resources */,
