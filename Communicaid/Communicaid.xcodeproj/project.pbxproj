@@ -87,6 +87,7 @@
 		945EF8F617F7C4C400B5445F = {
 			isa = PBXGroup;
 			children = (
+				945EF98317F7D72B00B5445F /* Classes */,
 				945EF90817F7C4C400B5445F /* Communicaid */,
 				945EF92D17F7C4C400B5445F /* CommunicaidTests */,
 				945EF90117F7C4C400B5445F /* Frameworks */,
@@ -158,6 +159,13 @@
 				945EF93017F7C4C400B5445F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		945EF98317F7D72B00B5445F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +489,7 @@
 				945EF93917F7C4C400B5445F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		945EF93A17F7C4C400B5445F /* Build configuration list for PBXNativeTarget "CommunicaidTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +498,7 @@
 				945EF93C17F7C4C400B5445F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
