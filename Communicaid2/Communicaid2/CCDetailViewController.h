@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CCDetailViewController : UIViewController <UISplitViewControllerDelegate>
-
+#import "ATTSpeechKit.h"
+#import "SpeechConfig.h"
+#import "SpeechAuth.h"
+@interface CCDetailViewController : UIViewController <UISplitViewControllerDelegate, ATTSpeechServiceDelegate>
+- (void) handleRecognition: (NSString*) recognizedText;
+- (void) prepareForSpeech;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 @end

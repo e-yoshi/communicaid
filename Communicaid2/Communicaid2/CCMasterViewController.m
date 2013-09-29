@@ -10,6 +10,7 @@
 #import "CCCell.h"
 @interface CCMasterViewController ()
 @property (strong, nonatomic) NSArray *arrayOfProducts;
+@property (strong, nonatomic) NSArray *arrayOfImages;
 @end
 
 @implementation CCMasterViewController
@@ -22,6 +23,7 @@
     }
     return self;
 }
+
 
 - (NSArray *)arrayOfProducts {
     if (!_arrayOfProducts) _arrayOfProducts = @[@"Alcohol",@"Cigarettes",@"Batteries",@"Drugs", @"Others"];
