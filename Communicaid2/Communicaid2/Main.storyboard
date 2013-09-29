@@ -44,7 +44,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBz-mY-Vn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="4028" y="-518"/>
+=======
+            <point key="canvasLocation" x="4184" y="844"/>
+>>>>>>> 65516303afb42d5b53612cafab9a023fe509ebb6
         </scene>
         <!--Master View Controller - Product Categories-->
         <scene sceneID="cz2-SF-D3z">
@@ -89,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXz-KV-8bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3998" y="-1809"/>
+            <point key="canvasLocation" x="4708" y="-827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rqe-EL-ywN">
@@ -104,7 +108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZg-Fd-1y8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3480" y="-1791"/>
+            <point key="canvasLocation" x="4212" y="-821"/>
         </scene>
         <!--Split View Controller - Welcome-->
         <scene sceneID="Zex-fz-46Z">
@@ -119,7 +123,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fd-l9-PMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3144" y="-526"/>
+            <point key="canvasLocation" x="3172" y="812"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -159,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3V-6b-Pes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3154" y="730"/>
+            <point key="canvasLocation" x="3120" y="-576"/>
         </scene>
         <!--View Controller - Payment-->
         <scene sceneID="ERS-h8-hCg">
