@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41F9F2B417F8C1B4000CD34D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B317F8C1B4000CD34D /* Foundation.framework */; };
+		41F9F2B617F8C1B5000CD34D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B517F8C1B5000CD34D /* CoreGraphics.framework */; };
+		41F9F2B817F8C1B5000CD34D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B717F8C1B5000CD34D /* UIKit.framework */; };
+		41F9F2BA17F8C1B5000CD34D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B917F8C1B5000CD34D /* CoreData.framework */; };
+		41F9F2C017F8C1B5000CD34D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41F9F2BE17F8C1B5000CD34D /* InfoPlist.strings */; };
+		41F9F2C217F8C1B5000CD34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2C117F8C1B5000CD34D /* main.m */; };
+		41F9F2C617F8C1B5000CD34D /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2C517F8C1B5000CD34D /* CCAppDelegate.m */; };
+		41F9F2C917F8C1B5000CD34D /* CommunicAidPhone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2C717F8C1B5000CD34D /* CommunicAidPhone.xcdatamodeld */; };
+		41F9F2CB17F8C1B5000CD34D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F9F2CA17F8C1B5000CD34D /* Images.xcassets */; };
+		41F9F2D217F8C1B5000CD34D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2D117F8C1B5000CD34D /* XCTest.framework */; };
+		41F9F2D317F8C1B5000CD34D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B317F8C1B4000CD34D /* Foundation.framework */; };
+		41F9F2D417F8C1B5000CD34D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B717F8C1B5000CD34D /* UIKit.framework */; };
+		41F9F2D517F8C1B5000CD34D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2B917F8C1B5000CD34D /* CoreData.framework */; };
+		41F9F2DD17F8C1B5000CD34D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41F9F2DB17F8C1B5000CD34D /* InfoPlist.strings */; };
+		41F9F2DF17F8C1B5000CD34D /* CommunicAidPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2DE17F8C1B5000CD34D /* CommunicAidPhoneTests.m */; };
+		41F9F2ED17F8C1E9000CD34D /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2EA17F8C1E9000CD34D /* SpeechAuth.m */; };
+		41F9F2EE17F8C1E9000CD34D /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2EC17F8C1E9000CD34D /* SpeechConfig.m */; };
+		41F9F2F017F8C20F000CD34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F9F2EF17F8C20F000CD34D /* Main.storyboard */; };
+		41F9F2F317F8C293000CD34D /* SpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2F217F8C293000CD34D /* SpeechViewController.m */; };
+		41F9F2F517F8C2BC000CD34D /* TalkButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F9F2F417F8C2BC000CD34D /* TalkButton.png */; };
+		41F9F2F817F8C320000CD34D /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2F617F8C320000CD34D /* ATTSpeechKit.a */; };
+		41F9F2FD17F8C3CC000CD34D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2F917F8C3CC000CD34D /* AudioToolbox.framework */; };
+		41F9F2FE17F8C3CC000CD34D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2FA17F8C3CC000CD34D /* AVFoundation.framework */; };
+		41F9F2FF17F8C3CC000CD34D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2FB17F8C3CC000CD34D /* CFNetwork.framework */; };
+		41F9F30017F8C3CC000CD34D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F2FC17F8C3CC000CD34D /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41F9F2D617F8C1B5000CD34D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F9F2A817F8C1B4000CD34D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41F9F2AF17F8C1B4000CD34D;
+			remoteInfo = CommunicAidPhone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41F9F2B017F8C1B4000CD34D /* CommunicAidPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunicAidPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F9F2B317F8C1B4000CD34D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41F9F2B517F8C1B5000CD34D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		41F9F2B717F8C1B5000CD34D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		41F9F2B917F8C1B5000CD34D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		41F9F2BD17F8C1B5000CD34D /* CommunicAidPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CommunicAidPhone-Info.plist"; sourceTree = "<group>"; };
+		41F9F2BF17F8C1B5000CD34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41F9F2C117F8C1B5000CD34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41F9F2C317F8C1B5000CD34D /* CommunicAidPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommunicAidPhone-Prefix.pch"; sourceTree = "<group>"; };
+		41F9F2C417F8C1B5000CD34D /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
+		41F9F2C517F8C1B5000CD34D /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
+		41F9F2C817F8C1B5000CD34D /* CommunicAidPhone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommunicAidPhone.xcdatamodel; sourceTree = "<group>"; };
+		41F9F2CA17F8C1B5000CD34D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		41F9F2D017F8C1B5000CD34D /* CommunicAidPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommunicAidPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F9F2D117F8C1B5000CD34D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		41F9F2DA17F8C1B5000CD34D /* CommunicAidPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CommunicAidPhoneTests-Info.plist"; sourceTree = "<group>"; };
+		41F9F2DC17F8C1B5000CD34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41F9F2DE17F8C1B5000CD34D /* CommunicAidPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunicAidPhoneTests.m; sourceTree = "<group>"; };
+		41F9F2E917F8C1E9000CD34D /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
+		41F9F2EA17F8C1E9000CD34D /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
+		41F9F2EB17F8C1E9000CD34D /* SpeechConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechConfig.h; sourceTree = "<group>"; };
+		41F9F2EC17F8C1E9000CD34D /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechConfig.m; sourceTree = "<group>"; };
+		41F9F2EF17F8C20F000CD34D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		41F9F2F117F8C293000CD34D /* SpeechViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechViewController.h; sourceTree = "<group>"; };
+		41F9F2F217F8C293000CD34D /* SpeechViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechViewController.m; sourceTree = "<group>"; };
+		41F9F2F417F8C2BC000CD34D /* TalkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TalkButton.png; sourceTree = "<group>"; };
+		41F9F2F617F8C320000CD34D /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ATTSpeechKit.a; sourceTree = "<group>"; };
+		41F9F2F717F8C320000CD34D /* ATTSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTSpeechKit.h; sourceTree = "<group>"; };
+		41F9F2F917F8C3CC000CD34D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		41F9F2FA17F8C3CC000CD34D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		41F9F2FB17F8C3CC000CD34D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		41F9F2FC17F8C3CC000CD34D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41F9F2AD17F8C1B4000CD34D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F9F2FD17F8C3CC000CD34D /* AudioToolbox.framework in Frameworks */,
+				41F9F2FE17F8C3CC000CD34D /* AVFoundation.framework in Frameworks */,
+				41F9F2FF17F8C3CC000CD34D /* CFNetwork.framework in Frameworks */,
+				41F9F30017F8C3CC000CD34D /* Security.framework in Frameworks */,
+				41F9F2B617F8C1B5000CD34D /* CoreGraphics.framework in Frameworks */,
+				41F9F2BA17F8C1B5000CD34D /* CoreData.framework in Frameworks */,
+				41F9F2B817F8C1B5000CD34D /* UIKit.framework in Frameworks */,
+				41F9F2B417F8C1B4000CD34D /* Foundation.framework in Frameworks */,
+				41F9F2F817F8C320000CD34D /* ATTSpeechKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41F9F2CD17F8C1B5000CD34D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F9F2D217F8C1B5000CD34D /* XCTest.framework in Frameworks */,
+				41F9F2D517F8C1B5000CD34D /* CoreData.framework in Frameworks */,
+				41F9F2D417F8C1B5000CD34D /* UIKit.framework in Frameworks */,
+				41F9F2D317F8C1B5000CD34D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41F9F2A717F8C1B4000CD34D = {
+			isa = PBXGroup;
+			children = (
+				41F9F2F617F8C320000CD34D /* ATTSpeechKit.a */,
+				41F9F2F717F8C320000CD34D /* ATTSpeechKit.h */,
+				41F9F2E817F8C1E9000CD34D /* Model */,
+				41F9F2BB17F8C1B5000CD34D /* CommunicAidPhone */,
+				41F9F2D817F8C1B5000CD34D /* CommunicAidPhoneTests */,
+				41F9F2B217F8C1B4000CD34D /* Frameworks */,
+				41F9F2B117F8C1B4000CD34D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41F9F2B117F8C1B4000CD34D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2B017F8C1B4000CD34D /* CommunicAidPhone.app */,
+				41F9F2D017F8C1B5000CD34D /* CommunicAidPhoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41F9F2B217F8C1B4000CD34D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2F917F8C3CC000CD34D /* AudioToolbox.framework */,
+				41F9F2FA17F8C3CC000CD34D /* AVFoundation.framework */,
+				41F9F2FB17F8C3CC000CD34D /* CFNetwork.framework */,
+				41F9F2FC17F8C3CC000CD34D /* Security.framework */,
+				41F9F2B317F8C1B4000CD34D /* Foundation.framework */,
+				41F9F2B517F8C1B5000CD34D /* CoreGraphics.framework */,
+				41F9F2B717F8C1B5000CD34D /* UIKit.framework */,
+				41F9F2B917F8C1B5000CD34D /* CoreData.framework */,
+				41F9F2D117F8C1B5000CD34D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41F9F2BB17F8C1B5000CD34D /* CommunicAidPhone */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2C417F8C1B5000CD34D /* CCAppDelegate.h */,
+				41F9F2C517F8C1B5000CD34D /* CCAppDelegate.m */,
+				41F9F2EF17F8C20F000CD34D /* Main.storyboard */,
+				41F9F2F117F8C293000CD34D /* SpeechViewController.h */,
+				41F9F2F217F8C293000CD34D /* SpeechViewController.m */,
+				41F9F2CA17F8C1B5000CD34D /* Images.xcassets */,
+				41F9F2C717F8C1B5000CD34D /* CommunicAidPhone.xcdatamodeld */,
+				41F9F2BC17F8C1B5000CD34D /* Supporting Files */,
+			);
+			path = CommunicAidPhone;
+			sourceTree = "<group>";
+		};
+		41F9F2BC17F8C1B5000CD34D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2F417F8C2BC000CD34D /* TalkButton.png */,
+				41F9F2BD17F8C1B5000CD34D /* CommunicAidPhone-Info.plist */,
+				41F9F2BE17F8C1B5000CD34D /* InfoPlist.strings */,
+				41F9F2C117F8C1B5000CD34D /* main.m */,
+				41F9F2C317F8C1B5000CD34D /* CommunicAidPhone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41F9F2D817F8C1B5000CD34D /* CommunicAidPhoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2DE17F8C1B5000CD34D /* CommunicAidPhoneTests.m */,
+				41F9F2D917F8C1B5000CD34D /* Supporting Files */,
+			);
+			path = CommunicAidPhoneTests;
+			sourceTree = "<group>";
+		};
+		41F9F2D917F8C1B5000CD34D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2DA17F8C1B5000CD34D /* CommunicAidPhoneTests-Info.plist */,
+				41F9F2DB17F8C1B5000CD34D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41F9F2E817F8C1E9000CD34D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41F9F2E917F8C1E9000CD34D /* SpeechAuth.h */,
+				41F9F2EA17F8C1E9000CD34D /* SpeechAuth.m */,
+				41F9F2EB17F8C1E9000CD34D /* SpeechConfig.h */,
+				41F9F2EC17F8C1E9000CD34D /* SpeechConfig.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41F9F2AF17F8C1B4000CD34D /* CommunicAidPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41F9F2E217F8C1B5000CD34D /* Build configuration list for PBXNativeTarget "CommunicAidPhone" */;
+			buildPhases = (
+				41F9F2AC17F8C1B4000CD34D /* Sources */,
+				41F9F2AD17F8C1B4000CD34D /* Frameworks */,
+				41F9F2AE17F8C1B4000CD34D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommunicAidPhone;
+			productName = CommunicAidPhone;
+			productReference = 41F9F2B017F8C1B4000CD34D /* CommunicAidPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		41F9F2CF17F8C1B5000CD34D /* CommunicAidPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41F9F2E517F8C1B5000CD34D /* Build configuration list for PBXNativeTarget "CommunicAidPhoneTests" */;
+			buildPhases = (
+				41F9F2CC17F8C1B5000CD34D /* Sources */,
+				41F9F2CD17F8C1B5000CD34D /* Frameworks */,
+				41F9F2CE17F8C1B5000CD34D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41F9F2D717F8C1B5000CD34D /* PBXTargetDependency */,
+			);
+			name = CommunicAidPhoneTests;
+			productName = CommunicAidPhoneTests;
+			productReference = 41F9F2D017F8C1B5000CD34D /* CommunicAidPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41F9F2A817F8C1B4000CD34D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Lee Yu Zhou";
+				TargetAttributes = {
+					41F9F2CF17F8C1B5000CD34D = {
+						TestTargetID = 41F9F2AF17F8C1B4000CD34D;
+					};
+				};
+			};
+			buildConfigurationList = 41F9F2AB17F8C1B4000CD34D /* Build configuration list for PBXProject "CommunicAidPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41F9F2A717F8C1B4000CD34D;
+			productRefGroup = 41F9F2B117F8C1B4000CD34D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41F9F2AF17F8C1B4000CD34D /* CommunicAidPhone */,
+				41F9F2CF17F8C1B5000CD34D /* CommunicAidPhoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41F9F2AE17F8C1B4000CD34D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F9F2F017F8C20F000CD34D /* Main.storyboard in Resources */,
+				41F9F2F517F8C2BC000CD34D /* TalkButton.png in Resources */,
+				41F9F2C017F8C1B5000CD34D /* InfoPlist.strings in Resources */,
+				41F9F2CB17F8C1B5000CD34D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41F9F2CE17F8C1B5000CD34D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F9F2DD17F8C1B5000CD34D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41F9F2AC17F8C1B4000CD34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F9F2C917F8C1B5000CD34D /* CommunicAidPhone.xcdatamodeld in Sources */,
+				41F9F2EE17F8C1E9000CD34D /* SpeechConfig.m in Sources */,
+				41F9F2F317F8C293000CD34D /* SpeechViewController.m in Sources */,
+				41F9F2ED17F8C1E9000CD34D /* SpeechAuth.m in Sources */,
+				41F9F2C617F8C1B5000CD34D /* CCAppDelegate.m in Sources */,
+				41F9F2C217F8C1B5000CD34D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41F9F2CC17F8C1B5000CD34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F9F2DF17F8C1B5000CD34D /* CommunicAidPhoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41F9F2D717F8C1B5000CD34D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41F9F2AF17F8C1B4000CD34D /* CommunicAidPhone */;
+			targetProxy = 41F9F2D617F8C1B5000CD34D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		41F9F2BE17F8C1B5000CD34D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41F9F2BF17F8C1B5000CD34D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41F9F2DB17F8C1B5000CD34D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41F9F2DC17F8C1B5000CD34D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41F9F2E017F8C1B5000CD34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41F9F2E117F8C1B5000CD34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41F9F2E317F8C1B5000CD34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommunicAidPhone/CommunicAidPhone-Prefix.pch";
+				INFOPLIST_FILE = "CommunicAidPhone/CommunicAidPhone-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/LeeYuZhou/Documents/Development/Communicaid2/CommunicAidPhone,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		41F9F2E417F8C1B5000CD34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommunicAidPhone/CommunicAidPhone-Prefix.pch";
+				INFOPLIST_FILE = "CommunicAidPhone/CommunicAidPhone-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/LeeYuZhou/Documents/Development/Communicaid2/CommunicAidPhone,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		41F9F2E617F8C1B5000CD34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CommunicAidPhone.app/CommunicAidPhone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommunicAidPhone/CommunicAidPhone-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CommunicAidPhoneTests/CommunicAidPhoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		41F9F2E717F8C1B5000CD34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CommunicAidPhone.app/CommunicAidPhone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommunicAidPhone/CommunicAidPhone-Prefix.pch";
+				INFOPLIST_FILE = "CommunicAidPhoneTests/CommunicAidPhoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41F9F2AB17F8C1B4000CD34D /* Build configuration list for PBXProject "CommunicAidPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F9F2E017F8C1B5000CD34D /* Debug */,
+				41F9F2E117F8C1B5000CD34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41F9F2E217F8C1B5000CD34D /* Build configuration list for PBXNativeTarget "CommunicAidPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F9F2E317F8C1B5000CD34D /* Debug */,
+				41F9F2E417F8C1B5000CD34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		41F9F2E517F8C1B5000CD34D /* Build configuration list for PBXNativeTarget "CommunicAidPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F9F2E617F8C1B5000CD34D /* Debug */,
+				41F9F2E717F8C1B5000CD34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41F9F2C717F8C1B5000CD34D /* CommunicAidPhone.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41F9F2C817F8C1B5000CD34D /* CommunicAidPhone.xcdatamodel */,
+			);
+			currentVersion = 41F9F2C817F8C1B5000CD34D /* CommunicAidPhone.xcdatamodel */;
+			path = CommunicAidPhone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 41F9F2A817F8C1B4000CD34D /* Project object */;
+}
