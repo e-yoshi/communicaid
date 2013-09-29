@@ -17,6 +17,91 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+- (void)initializePubNubClient {
+    
+    [PubNub setDelegate:self];
+    
+    
+    // Subscribe for client connection state change
+    // (observe when client will be disconnected)
+    [[PNObservationCenter defaultCenter] addClientConnectionStateObserver:self
+                                                        withCallbackBlock:^(NSString *origin,
+                                                                            BOOL connected,
+                                                                            PNError *error) {
+                                                            
+                                                            if (!connected && error) {
+                                                                
+                                                                UIAlertView *infoAlertView = [UIAlertView new];
+                                                                infoAlertView.title = [NSString stringWithFormat:@"%@(%@)",
+                                                                                       [error localizedDescription],
+                                                                                       NSStringFromClass([self class])];
+                                                                infoAlertView.message = [NSString stringWithFormat:@"Reason:\n%@\nSuggestion:\n%@",
+                                                                                         [error localizedFailureReason],
+                                                                                         [error localizedRecoverySuggestion]];
+                                                                [infoAlertView addButtonWithTitle:@"OK"];
+                                                                [infoAlertView show];
+                                                            }
+                                                        }];
+    
+    
+    // Subscribe application delegate on subscription updates
+    // (events when client subscribe on some channel)
+    // Subscribe application delegate on subscription updates
+    // (events when client subscribe on some channel)
+    [[PNObservationCenter defaultCenter] addClientChannelSubscriptionStateObserver:self
+                                                                 withCallbackBlock:^(PNSubscriptionProcessState state,
+                                                                                     NSArray *channels,
+                                                                                     PNError *subscriptionError) {
+                                                                     
+                                                                     switch (state) {
+                                                                             
+                                                                         case PNSubscriptionProcessNotSubscribedState:
+                                                                             
+                                                                             PNLog(PNLogGeneralLevel, self,
+                                                                                   @"{BLOCK-P} PubNub client subscription failed with error: %@",
+                                                                                   subscriptionError);
+                                                                             break;
+                                                                             
+                                                                         case PNSubscriptionProcessSubscribedState:
+                                                                             
+                                                                             PNLog(PNLogGeneralLevel, self,
+                                                                                   @"{BLOCK-P} PubNub client subscribed on channels: %@",
+                                                                                   channels);
+                                                                             break;
+                                                                             
+                                                                         case PNSubscriptionProcessWillRestoreState:
+                                                                             
+                                                                             PNLog(PNLogGeneralLevel, self,
+                                                                                   @"{BLOCK-P} PubNub client will restore subscribed on channels: %@",
+                                                                                   channels);
+                                                                             break;
+                                                                             
+                                                                         case PNSubscriptionProcessRestoredState:
+                                                                             
+                                                                             PNLog(PNLogGeneralLevel, self,
+                                                                                   @"{BLOCK-P} PubNub client restores subscribed on channels: %@",
+                                                                                   channels);
+                                                                             break;
+                                                                     }
+                                                                 }];
+    
+    // Subscribe on message arrival events with block
+    [[PNObservationCenter defaultCenter] addMessageReceiveObserver:self
+                                                         withBlock:^(PNMessage *message) {
+                                                             
+                                                             PNLog(PNLogGeneralLevel, self, @"{BLOCK-P} PubNubc client received new message: %@",
+                                                                   message);
+                                                         }];
+    
+    // Subscribe on presence event arrival events with block
+    [[PNObservationCenter defaultCenter] addPresenceEventObserver:self
+                                                        withBlock:^(PNPresenceEvent *presenceEvent) {
+                                                            
+                                                            PNLog(PNLogGeneralLevel, self, @"{BLOCK-P} PubNubc client received new event: %@",
+                                                                  presenceEvent);
+                                                        }];
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

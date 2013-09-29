@@ -44,11 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBz-mY-Vn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="4028" y="-518"/>
-=======
-            <point key="canvasLocation" x="4184" y="844"/>
->>>>>>> 65516303afb42d5b53612cafab9a023fe509ebb6
         </scene>
         <!--Master View Controller - Product Categories-->
         <scene sceneID="cz2-SF-D3z">
