@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		945EF90317F7C4C400B5445F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF90217F7C4C400B5445F /* Foundation.framework */; };
+		945EF90517F7C4C400B5445F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF90417F7C4C400B5445F /* CoreGraphics.framework */; };
+		945EF90717F7C4C400B5445F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF90617F7C4C400B5445F /* UIKit.framework */; };
+		945EF90D17F7C4C400B5445F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945EF90B17F7C4C400B5445F /* InfoPlist.strings */; };
+		945EF90F17F7C4C400B5445F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF90E17F7C4C400B5445F /* main.m */; };
+		945EF91317F7C4C400B5445F /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF91217F7C4C400B5445F /* XYZAppDelegate.m */; };
+		945EF91617F7C4C400B5445F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF91417F7C4C400B5445F /* Main_iPhone.storyboard */; };
+		945EF91917F7C4C400B5445F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF91717F7C4C400B5445F /* Main_iPad.storyboard */; };
+		945EF91C17F7C4C400B5445F /* XYZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF91B17F7C4C400B5445F /* XYZMasterViewController.m */; };
+		945EF91F17F7C4C400B5445F /* XYZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF91E17F7C4C400B5445F /* XYZDetailViewController.m */; };
+		945EF92117F7C4C400B5445F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945EF92017F7C4C400B5445F /* Images.xcassets */; };
+		945EF92817F7C4C400B5445F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF92717F7C4C400B5445F /* XCTest.framework */; };
+		945EF92917F7C4C400B5445F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF90217F7C4C400B5445F /* Foundation.framework */; };
+		945EF92A17F7C4C400B5445F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF90617F7C4C400B5445F /* UIKit.framework */; };
+		945EF93217F7C4C400B5445F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945EF93017F7C4C400B5445F /* InfoPlist.strings */; };
+		945EF93417F7C4C400B5445F /* CommunicaidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF93317F7C4C400B5445F /* CommunicaidTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		945EF92B17F7C4C400B5445F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945EF8F717F7C4C400B5445F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945EF8FE17F7C4C400B5445F;
+			remoteInfo = Communicaid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		945EF8FF17F7C4C400B5445F /* Communicaid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Communicaid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945EF90217F7C4C400B5445F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		945EF90417F7C4C400B5445F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		945EF90617F7C4C400B5445F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		945EF90A17F7C4C400B5445F /* Communicaid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Communicaid-Info.plist"; sourceTree = "<group>"; };
+		945EF90C17F7C4C400B5445F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		945EF90E17F7C4C400B5445F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		945EF91017F7C4C400B5445F /* Communicaid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Communicaid-Prefix.pch"; sourceTree = "<group>"; };
+		945EF91117F7C4C400B5445F /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
+		945EF91217F7C4C400B5445F /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
+		945EF91517F7C4C400B5445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		945EF91817F7C4C400B5445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		945EF91A17F7C4C400B5445F /* XYZMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZMasterViewController.h; sourceTree = "<group>"; };
+		945EF91B17F7C4C400B5445F /* XYZMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZMasterViewController.m; sourceTree = "<group>"; };
+		945EF91D17F7C4C400B5445F /* XYZDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZDetailViewController.h; sourceTree = "<group>"; };
+		945EF91E17F7C4C400B5445F /* XYZDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZDetailViewController.m; sourceTree = "<group>"; };
+		945EF92017F7C4C400B5445F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		945EF92617F7C4C400B5445F /* CommunicaidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommunicaidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		945EF92717F7C4C400B5445F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		945EF92F17F7C4C400B5445F /* CommunicaidTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CommunicaidTests-Info.plist"; sourceTree = "<group>"; };
+		945EF93117F7C4C400B5445F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		945EF93317F7C4C400B5445F /* CommunicaidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunicaidTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945EF8FC17F7C4C400B5445F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945EF90517F7C4C400B5445F /* CoreGraphics.framework in Frameworks */,
+				945EF90717F7C4C400B5445F /* UIKit.framework in Frameworks */,
+				945EF90317F7C4C400B5445F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945EF92317F7C4C400B5445F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945EF92817F7C4C400B5445F /* XCTest.framework in Frameworks */,
+				945EF92A17F7C4C400B5445F /* UIKit.framework in Frameworks */,
+				945EF92917F7C4C400B5445F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		945EF8F617F7C4C400B5445F = {
+			isa = PBXGroup;
+			children = (
+				945EF90817F7C4C400B5445F /* Communicaid */,
+				945EF92D17F7C4C400B5445F /* CommunicaidTests */,
+				945EF90117F7C4C400B5445F /* Frameworks */,
+				945EF90017F7C4C400B5445F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		945EF90017F7C4C400B5445F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945EF8FF17F7C4C400B5445F /* Communicaid.app */,
+				945EF92617F7C4C400B5445F /* CommunicaidTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		945EF90117F7C4C400B5445F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				945EF90217F7C4C400B5445F /* Foundation.framework */,
+				945EF90417F7C4C400B5445F /* CoreGraphics.framework */,
+				945EF90617F7C4C400B5445F /* UIKit.framework */,
+				945EF92717F7C4C400B5445F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		945EF90817F7C4C400B5445F /* Communicaid */ = {
+			isa = PBXGroup;
+			children = (
+				945EF91117F7C4C400B5445F /* XYZAppDelegate.h */,
+				945EF91217F7C4C400B5445F /* XYZAppDelegate.m */,
+				945EF91417F7C4C400B5445F /* Main_iPhone.storyboard */,
+				945EF91717F7C4C400B5445F /* Main_iPad.storyboard */,
+				945EF91A17F7C4C400B5445F /* XYZMasterViewController.h */,
+				945EF91B17F7C4C400B5445F /* XYZMasterViewController.m */,
+				945EF91D17F7C4C400B5445F /* XYZDetailViewController.h */,
+				945EF91E17F7C4C400B5445F /* XYZDetailViewController.m */,
+				945EF92017F7C4C400B5445F /* Images.xcassets */,
+				945EF90917F7C4C400B5445F /* Supporting Files */,
+			);
+			path = Communicaid;
+			sourceTree = "<group>";
+		};
+		945EF90917F7C4C400B5445F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				945EF90A17F7C4C400B5445F /* Communicaid-Info.plist */,
+				945EF90B17F7C4C400B5445F /* InfoPlist.strings */,
+				945EF90E17F7C4C400B5445F /* main.m */,
+				945EF91017F7C4C400B5445F /* Communicaid-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		945EF92D17F7C4C400B5445F /* CommunicaidTests */ = {
+			isa = PBXGroup;
+			children = (
+				945EF93317F7C4C400B5445F /* CommunicaidTests.m */,
+				945EF92E17F7C4C400B5445F /* Supporting Files */,
+			);
+			path = CommunicaidTests;
+			sourceTree = "<group>";
+		};
+		945EF92E17F7C4C400B5445F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				945EF92F17F7C4C400B5445F /* CommunicaidTests-Info.plist */,
+				945EF93017F7C4C400B5445F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945EF8FE17F7C4C400B5445F /* Communicaid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945EF93717F7C4C400B5445F /* Build configuration list for PBXNativeTarget "Communicaid" */;
+			buildPhases = (
+				945EF8FB17F7C4C400B5445F /* Sources */,
+				945EF8FC17F7C4C400B5445F /* Frameworks */,
+				945EF8FD17F7C4C400B5445F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Communicaid;
+			productName = Communicaid;
+			productReference = 945EF8FF17F7C4C400B5445F /* Communicaid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		945EF92517F7C4C400B5445F /* CommunicaidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945EF93A17F7C4C400B5445F /* Build configuration list for PBXNativeTarget "CommunicaidTests" */;
+			buildPhases = (
+				945EF92217F7C4C400B5445F /* Sources */,
+				945EF92317F7C4C400B5445F /* Frameworks */,
+				945EF92417F7C4C400B5445F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945EF92C17F7C4C400B5445F /* PBXTargetDependency */,
+			);
+			name = CommunicaidTests;
+			productName = CommunicaidTests;
+			productReference = 945EF92617F7C4C400B5445F /* CommunicaidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		945EF8F717F7C4C400B5445F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = XYZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Yoshi;
+				TargetAttributes = {
+					945EF92517F7C4C400B5445F = {
+						TestTargetID = 945EF8FE17F7C4C400B5445F;
+					};
+				};
+			};
+			buildConfigurationList = 945EF8FA17F7C4C400B5445F /* Build configuration list for PBXProject "Communicaid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 945EF8F617F7C4C400B5445F;
+			productRefGroup = 945EF90017F7C4C400B5445F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945EF8FE17F7C4C400B5445F /* Communicaid */,
+				945EF92517F7C4C400B5445F /* CommunicaidTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		945EF8FD17F7C4C400B5445F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945EF91917F7C4C400B5445F /* Main_iPad.storyboard in Resources */,
+				945EF92117F7C4C400B5445F /* Images.xcassets in Resources */,
+				945EF91617F7C4C400B5445F /* Main_iPhone.storyboard in Resources */,
+				945EF90D17F7C4C400B5445F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945EF92417F7C4C400B5445F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945EF93217F7C4C400B5445F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945EF8FB17F7C4C400B5445F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945EF91317F7C4C400B5445F /* XYZAppDelegate.m in Sources */,
+				945EF91F17F7C4C400B5445F /* XYZDetailViewController.m in Sources */,
+				945EF91C17F7C4C400B5445F /* XYZMasterViewController.m in Sources */,
+				945EF90F17F7C4C400B5445F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945EF92217F7C4C400B5445F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945EF93417F7C4C400B5445F /* CommunicaidTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		945EF92C17F7C4C400B5445F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945EF8FE17F7C4C400B5445F /* Communicaid */;
+			targetProxy = 945EF92B17F7C4C400B5445F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		945EF90B17F7C4C400B5445F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF90C17F7C4C400B5445F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		945EF91417F7C4C400B5445F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF91517F7C4C400B5445F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		945EF91717F7C4C400B5445F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF91817F7C4C400B5445F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		945EF93017F7C4C400B5445F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF93117F7C4C400B5445F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		945EF93517F7C4C400B5445F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		945EF93617F7C4C400B5445F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		945EF93817F7C4C400B5445F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Communicaid/Communicaid-Prefix.pch";
+				INFOPLIST_FILE = "Communicaid/Communicaid-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		945EF93917F7C4C400B5445F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Communicaid/Communicaid-Prefix.pch";
+				INFOPLIST_FILE = "Communicaid/Communicaid-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		945EF93B17F7C4C400B5445F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Communicaid.app/Communicaid";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Communicaid/Communicaid-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CommunicaidTests/CommunicaidTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		945EF93C17F7C4C400B5445F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Communicaid.app/Communicaid";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Communicaid/Communicaid-Prefix.pch";
+				INFOPLIST_FILE = "CommunicaidTests/CommunicaidTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945EF8FA17F7C4C400B5445F /* Build configuration list for PBXProject "Communicaid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945EF93517F7C4C400B5445F /* Debug */,
+				945EF93617F7C4C400B5445F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945EF93717F7C4C400B5445F /* Build configuration list for PBXNativeTarget "Communicaid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945EF93817F7C4C400B5445F /* Debug */,
+				945EF93917F7C4C400B5445F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		945EF93A17F7C4C400B5445F /* Build configuration list for PBXNativeTarget "CommunicaidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945EF93B17F7C4C400B5445F /* Debug */,
+				945EF93C17F7C4C400B5445F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 945EF8F717F7C4C400B5445F /* Project object */;
+}
