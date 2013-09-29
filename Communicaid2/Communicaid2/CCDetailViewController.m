@@ -23,11 +23,93 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view, typically from a nib.
+    self.currentChannel = nil;
+    self.messages = [NSMutableDictionary dictionary];
+    self.configuration = [PNConfiguration defaultConfiguration];
+    
+    
+    
+    
+    
+    CCDetailViewController *weakSelf = self;
+    
+    [[PNObservationCenter defaultCenter] addClientConnectionStateObserver:self
+                                                        withCallbackBlock:^(NSString *origin,
+                                                                            BOOL connected,
+                                                                            PNError *connectionError) {
+                                                            PNLog(PNLogGeneralLevel, self, @"{BLOCK} client identifier %@", [PubNub clientIdentifier]);
+                                                            
+                                                        }];
+    //
+    [[PNObservationCenter defaultCenter] addMessageReceiveObserver:self
+                                                         withBlock:^(PNMessage *message) {
+                                                             
+                                                             if (![[message.message substringToIndex:1] isEqualToString:@"*"]) {
+                                                                 NSDateFormatter *dateFormatter = [NSDateFormatter new];
+                                                                 dateFormatter.dateFormat = @"HH:mm:ss MM/dd/yy";
+                                                                 
+                                                                 PNChannel *channel = message.channel;
+                                                                 NSString *messages = [weakSelf.messages valueForKey:channel.name];
+                                                                 if (messages == nil) {
+                                                                     
+                                                                     messages = @"";
+                                                                 }
+                                                                 messages = [messages stringByAppendingFormat:@"%@\n",
+                                                                             message.message];
+                                                                 [weakSelf.messages setValue:messages forKey:channel.name];
+                                                                 
+                                                                 [self.messageTextField setText:messages];
+                                                                 
+                                                                 NSRange range = NSMakeRange(self.messageTextField.text.length - 1, 1);
+                                                                 [self.messageTextField scrollRangeToVisible:range];//weakSelf.currentChannelChat = [weakSelf.messages valueForKey:weakSelf.currentChannel.name];
+                                                             }
+                                                         }];
+    
+    
+    [self connectToChannel];
 }
+
+-(void) connectToChannel{
+    // set up channel
+    
+    [PubNub setConfiguration:[PNConfiguration configurationForOrigin:@"pubsub.pubnub.com" publishKey:@"demo" subscribeKey:@"demo" secretKey:@"mySecret"]];
+    [PubNub connect];
+    
+    PNChannel *channel_1 = [PNChannel channelWithName:@"a" shouldObservePresence:YES];
+    self.currentChannel = channel_1;
+    NSLog(@"%p", self.currentChannel);
+    
+    [PubNub subscribeOnChannel:self.currentChannel withCompletionHandlingBlock:^(PNSubscriptionProcessState state,
+                                                                                 NSArray *channels,
+                                                                                 PNError *subscriptionError) {
+        
+        NSString *alertMessage = [NSString stringWithFormat:@"Subscribed on channel: %@\nTo be able to send messages, select channel from righthand list",
+                                  self.currentChannel.name];
+        if (state == PNSubscriptionProcessNotSubscribedState) {
+            
+            alertMessage = [NSString stringWithFormat:@"Failed to subscribe on: %@", self.currentChannel.name];
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Subscribe"
+                                                                message:alertMessage
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        } else if (state == PNSubscriptionProcessSubscribedState) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Connected!"
+                                                                message:@"You are connected to CommunicAid"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+        
+    }];
+}
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -139,9 +221,10 @@
     NSLog(@"%@",recognizedText);
     // Load a website using the recognized text.
     // First make the recognizedText safe for use as a search term in a URL.
-    NSString* escapedTerm =
-    [recognizedText stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-    NSLog(@"%@",escapedTerm);
+    if (self.currentChannel != nil) {
+        [PubNub sendMessage:[NSString stringWithFormat:@"\"%@\"", recognizedText]
+                  toChannel:self.currentChannel];
+    }
 }
 
 - (void) speechService: (ATTSpeechService*) speechService

@@ -10,8 +10,19 @@
 #import "ATTSpeechKit.h"
 #import "SpeechConfig.h"
 #import "SpeechAuth.h"
-@interface CCDetailViewController : UIViewController <UISplitViewControllerDelegate, ATTSpeechServiceDelegate>
+@interface CCDetailViewController : UIViewController <UISplitViewControllerDelegate, ATTSpeechServiceDelegate, PNDelegate>
 - (void) handleRecognition: (NSString*) recognizedText;
 - (void) prepareForSpeech;
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (pn_desired_weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (nonatomic, strong) PNConfiguration *configuration;
+
+// Stores reference on current channel
+@property (nonatomic, strong) PNChannel *currentChannel;
+
+// Stores reference on dictionary which stores messages for each of channels
+@property (nonatomic, strong) NSMutableDictionary *messages;
+
+@property (strong, nonatomic) IBOutlet UITextView *messageTextField;
+-(void) connectToChannel;
 @end

@@ -47,8 +47,8 @@
 		41F9F29F17F8B73B000CD34D /* DrugsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F9F29B17F8B73B000CD34D /* DrugsIcon.png */; };
 		41F9F2A517F8B8EB000CD34D /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2A217F8B8EB000CD34D /* SpeechAuth.m */; };
 		41F9F2A617F8B8EB000CD34D /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F2A417F8B8EB000CD34D /* SpeechConfig.m */; };
-		41F9F48517F8E4C9000CD34D /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3E317F8E4C9000CD34D /* JSON.m */; };
-		41F9F48617F8E4C9000CD34D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3E517F8E4C9000CD34D /* JSONKit.m */; };
+		41F9F48517F8E4C9000CD34D /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3E317F8E4C9000CD34D /* JSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		41F9F48617F8E4C9000CD34D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3E517F8E4C9000CD34D /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		41F9F48717F8E4C9000CD34D /* PNObservationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3EA17F8E4C9000CD34D /* PNObservationCenter.m */; };
 		41F9F48817F8E4C9000CD34D /* PubNub.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3ED17F8E4C9000CD34D /* PubNub.m */; };
 		41F9F48917F8E4C9000CD34D /* PNWriteBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F3F117F8E4C9000CD34D /* PNWriteBuffer.m */; };
@@ -101,6 +101,8 @@
 		41F9F4B817F8E4C9000CD34D /* PNServiceChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F47D17F8E4C9000CD34D /* PNServiceChannel.m */; };
 		41F9F4B917F8E4C9000CD34D /* PNConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F48117F8E4C9000CD34D /* PNConnection.m */; };
 		41F9F4BA17F8E4C9000CD34D /* PNConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F48417F8E4C9000CD34D /* PNConnectionChannel.m */; };
+		41F9F4BC17F8E5DE000CD34D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */; };
+		41F9F4BE17F8E5E8000CD34D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F4BD17F8E5E8000CD34D /* libz.dylib */; };
 		5B497E4317F8DA5B002F120B /* CC_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */; };
 		5B497E4417F8DA5B002F120B /* CC_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4217F8DA5B002F120B /* CC_Icon.png */; };
 /* End PBXBuildFile section */
@@ -314,6 +316,8 @@
 		41F9F48217F8E4C9000CD34D /* PNConnectionChannel+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PNConnectionChannel+Protected.h"; sourceTree = "<group>"; };
 		41F9F48317F8E4C9000CD34D /* PNConnectionChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNConnectionChannel.h; sourceTree = "<group>"; };
 		41F9F48417F8E4C9000CD34D /* PNConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNConnectionChannel.m; sourceTree = "<group>"; };
+		41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		41F9F4BD17F8E5E8000CD34D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CC_Icon@2x.png"; sourceTree = "<group>"; };
 		5B497E4217F8DA5B002F120B /* CC_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CC_Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,6 +327,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F9F4BE17F8E5E8000CD34D /* libz.dylib in Frameworks */,
+				41F9F4BC17F8E5DE000CD34D /* SystemConfiguration.framework in Frameworks */,
 				41F9F29417F8B4CA000CD34D /* AudioToolbox.framework in Frameworks */,
 				41F9F29517F8B4CA000CD34D /* AVFoundation.framework in Frameworks */,
 				41F9F29617F8B4CA000CD34D /* CFNetwork.framework in Frameworks */,
@@ -374,6 +380,8 @@
 		41F9F22817F8AC92000CD34D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41F9F4BD17F8E5E8000CD34D /* libz.dylib */,
+				41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */,
 				41F9F29017F8B4CA000CD34D /* AudioToolbox.framework */,
 				41F9F29117F8B4CA000CD34D /* AVFoundation.framework */,
 				41F9F29217F8B4CA000CD34D /* CFNetwork.framework */,

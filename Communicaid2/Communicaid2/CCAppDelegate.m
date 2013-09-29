@@ -243,4 +243,136 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - PubNub client delegate methods
+
+- (void)pubnubClient:(PubNub *)client error:(PNError *)error {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client report that error occurred: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client willConnectToOrigin:(NSString *)origin {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client is about to connect to PubNub origin at: %@", origin);
+}
+
+- (void)pubnubClient:(PubNub *)client didConnectToOrigin:(NSString *)origin {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client successfully connected to PubNub origin at: %@", origin);
+}
+
+- (void)pubnubClient:(PubNub *)client connectionDidFailWithError:(PNError *)error {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client was unable to connect because of error: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client willDisconnectWithError:(PNError *)error {
+    
+    //PNLog(PNLogGeneralLevel, self, @"PubNub clinet will close connection because of error: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client didDisconnectWithError:(PNError *)error {
+    
+    //PNLog(PNLogGeneralLevel, self, @"PubNub client closed connection because of error: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client didDisconnectFromOrigin:(NSString *)origin {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client disconnected from PubNub origin at: %@", origin);
+}
+
+- (void)pubnubClient:(PubNub *)client didSubscribeOnChannels:(NSArray *)channels {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client successfully subscribed on channels: %@", channels);
+}
+
+- (void)pubnubClient:(PubNub *)client subscriptionDidFailWithError:(NSError *)error {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client failed to subscribe because of error: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client didUnsubscribeOnChannels:(NSArray *)channels {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client successfully unsubscribed from channels: %@", channels);
+}
+
+- (void)pubnubClient:(PubNub *)client unsubscriptionDidFailWithError:(PNError *)error {
+    
+    //PNLog(PNLogGeneralLevel, self, @"PubNub client failed to unsubscribe because of error: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client didReceiveTimeToken:(NSNumber *)timeToken {
+    
+    //PNLog(PNLogGeneralLevel, self, @"PubNub client recieved time token: %@", timeToken);
+}
+
+- (void)pubnubClient:(PubNub *)client timeTokenReceiveDidFailWithError:(PNError *)error {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client failed to receive time token because of error: %@", error);
+}
+
+- (void)pubnubClient:(PubNub *)client willSendMessage:(PNMessage *)message {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client is about to send message: %@", message);
+}
+
+- (void)pubnubClient:(PubNub *)client didFailMessageSend:(PNMessage *)message withError:(PNError *)error {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client failed to send message '%@' because of error: %@", message, error);
+}
+
+- (void)pubnubClient:(PubNub *)client didSendMessage:(PNMessage *)message {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client sent message: %@", message);
+}
+
+- (void)pubnubClient:(PubNub *)client didReceiveMessage:(PNMessage *)message {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client received message: %@", message);
+    NSLog( @"%@", [NSString stringWithFormat:@"received: %@", message.message] );
+    
+}
+
+- (void)pubnubClient:(PubNub *)client didReceivePresenceEvent:(PNPresenceEvent *)event {
+    
+    // PNLog(PNLogGeneralLevel, self, @"PubNub client received presence event: %@", event);
+}
+
+- (void)pubnubClient:(PubNub *)client
+didReceiveMessageHistory:(NSArray *)messages
+          forChannel:(PNChannel *)channel
+        startingFrom:(NSDate *)startDate
+                  to:(NSDate *)endDate {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client received history for %@ starting from %@ to %@: %@",
+    //      channel, startDate, endDate, messages);
+}
+
+- (void)pubnubClient:(PubNub *)client didFailHistoryDownloadForChannel:(PNChannel *)channel withError:(PNError *)error {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client failed to download history for %@ because of error: %@",
+    //      channel, error);
+}
+
+- (void)      pubnubClient:(PubNub *)client
+didReceiveParticipantsLits:(NSArray *)participantsList
+                forChannel:(PNChannel *)channel {
+    
+    //   PNLog(PNLogGeneralLevel, self, @"PubNub client received participants list for channel %@: %@",
+    //         participantsList, channel);
+}
+
+- (void)                     pubnubClient:(PubNub *)client
+didFailParticipantsListDownloadForChannel:(PNChannel *)channel
+                                withError:(PNError *)error {
+    
+    //  PNLog(PNLogGeneralLevel, self, @"PubNub client failed to download participants list for channel %@ because of error: %@",
+    //       channel, error);
+}
+
+- (NSNumber *)shouldResubscribeOnConnectionRestore {
+    
+    return @(NO);
+}
+
+
 @end
