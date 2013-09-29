@@ -13,7 +13,6 @@
 		945EF90D17F7C4C400B5445F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945EF90B17F7C4C400B5445F /* InfoPlist.strings */; };
 		945EF90F17F7C4C400B5445F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF90E17F7C4C400B5445F /* main.m */; };
 		945EF91317F7C4C400B5445F /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF91217F7C4C400B5445F /* XYZAppDelegate.m */; };
-		945EF91617F7C4C400B5445F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF91417F7C4C400B5445F /* Main_iPhone.storyboard */; };
 		945EF91917F7C4C400B5445F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF91717F7C4C400B5445F /* Main_iPad.storyboard */; };
 		945EF91C17F7C4C400B5445F /* XYZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF91B17F7C4C400B5445F /* XYZMasterViewController.m */; };
 		945EF91F17F7C4C400B5445F /* XYZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF91E17F7C4C400B5445F /* XYZDetailViewController.m */; };
@@ -46,7 +45,6 @@
 		945EF91017F7C4C400B5445F /* Communicaid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Communicaid-Prefix.pch"; sourceTree = "<group>"; };
 		945EF91117F7C4C400B5445F /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
 		945EF91217F7C4C400B5445F /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
-		945EF91517F7C4C400B5445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		945EF91817F7C4C400B5445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		945EF91A17F7C4C400B5445F /* XYZMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZMasterViewController.h; sourceTree = "<group>"; };
 		945EF91B17F7C4C400B5445F /* XYZMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZMasterViewController.m; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			children = (
 				945EF91117F7C4C400B5445F /* XYZAppDelegate.h */,
 				945EF91217F7C4C400B5445F /* XYZAppDelegate.m */,
-				945EF91417F7C4C400B5445F /* Main_iPhone.storyboard */,
 				945EF91717F7C4C400B5445F /* Main_iPad.storyboard */,
 				945EF91A17F7C4C400B5445F /* XYZMasterViewController.h */,
 				945EF91B17F7C4C400B5445F /* XYZMasterViewController.m */,
@@ -256,7 +253,6 @@
 			files = (
 				945EF91917F7C4C400B5445F /* Main_iPad.storyboard in Resources */,
 				945EF92117F7C4C400B5445F /* Images.xcassets in Resources */,
-				945EF91617F7C4C400B5445F /* Main_iPhone.storyboard in Resources */,
 				945EF90D17F7C4C400B5445F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +304,6 @@
 				945EF90C17F7C4C400B5445F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		945EF91417F7C4C400B5445F /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				945EF91517F7C4C400B5445F /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		945EF91717F7C4C400B5445F /* Main_iPad.storyboard */ = {
