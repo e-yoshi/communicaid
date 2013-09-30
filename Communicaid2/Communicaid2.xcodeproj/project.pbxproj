@@ -107,6 +107,8 @@
 		5B06A77717F8EF160039BF42 /* customerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B06A77517F8EF160039BF42 /* customerImage.png */; };
 		5B497E4317F8DA5B002F120B /* CC_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */; };
 		5B497E4417F8DA5B002F120B /* CC_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4217F8DA5B002F120B /* CC_Icon.png */; };
+		5B4FD7ED17F903A100D587EE /* startscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4FD7EB17F903A100D587EE /* startscreen.png */; };
+		5B4FD7EE17F903A100D587EE /* startscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4FD7EC17F903A100D587EE /* startscreen@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -324,6 +326,8 @@
 		5B06A77517F8EF160039BF42 /* customerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customerImage.png; sourceTree = "<group>"; };
 		5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CC_Icon@2x.png"; sourceTree = "<group>"; };
 		5B497E4217F8DA5B002F120B /* CC_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CC_Icon.png; sourceTree = "<group>"; };
+		5B4FD7EB17F903A100D587EE /* startscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startscreen.png; sourceTree = "<group>"; };
+		5B4FD7EC17F903A100D587EE /* startscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startscreen@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +426,8 @@
 		41F9F23217F8AC92000CD34D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B4FD7EB17F903A100D587EE /* startscreen.png */,
+				5B4FD7EC17F903A100D587EE /* startscreen@2x.png */,
 				5B06A77417F8EF160039BF42 /* cashierImage.png */,
 				5B06A77517F8EF160039BF42 /* customerImage.png */,
 				5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */,
@@ -835,12 +841,14 @@
 				5B06A77717F8EF160039BF42 /* customerImage.png in Resources */,
 				41F9F29F17F8B73B000CD34D /* DrugsIcon.png in Resources */,
 				41F9F28917F8B3D7000CD34D /* WelcomeIcon@2x.png in Resources */,
+				5B4FD7EE17F903A100D587EE /* startscreen@2x.png in Resources */,
 				5B497E4317F8DA5B002F120B /* CC_Icon@2x.png in Resources */,
 				41F9F26E17F8ADD2000CD34D /* Main.storyboard in Resources */,
 				5B497E4417F8DA5B002F120B /* CC_Icon.png in Resources */,
 				41F9F29E17F8B73B000CD34D /* CigaretteIcon.png in Resources */,
 				5B06A77617F8EF160039BF42 /* cashierImage.png in Resources */,
 				41F9F23617F8AC92000CD34D /* InfoPlist.strings in Resources */,
+				5B4FD7ED17F903A100D587EE /* startscreen.png in Resources */,
 				41F9F28817F8B3D7000CD34D /* WelcomeIcon.png in Resources */,
 				41F9F29C17F8B73B000CD34D /* AlcoholIcon.png in Resources */,
 				41F9F29D17F8B73B000CD34D /* BatteryIcon.png in Resources */,
