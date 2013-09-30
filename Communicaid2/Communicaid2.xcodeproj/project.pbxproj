@@ -109,6 +109,10 @@
 		5B497E4417F8DA5B002F120B /* CC_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4217F8DA5B002F120B /* CC_Icon.png */; };
 		5B4FD7ED17F903A100D587EE /* startscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4FD7EB17F903A100D587EE /* startscreen.png */; };
 		5B4FD7EE17F903A100D587EE /* startscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4FD7EC17F903A100D587EE /* startscreen@2x.png */; };
+		5B7200CB17F907D90022D96B /* cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B7200C717F907D90022D96B /* cash.png */; };
+		5B7200CC17F907D90022D96B /* debit.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B7200C817F907D90022D96B /* debit.png */; };
+		5B7200CD17F907D90022D96B /* credit.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B7200C917F907D90022D96B /* credit.png */; };
+		5B7200CE17F907D90022D96B /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B7200CA17F907D90022D96B /* check.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,6 +332,10 @@
 		5B497E4217F8DA5B002F120B /* CC_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CC_Icon.png; sourceTree = "<group>"; };
 		5B4FD7EB17F903A100D587EE /* startscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startscreen.png; sourceTree = "<group>"; };
 		5B4FD7EC17F903A100D587EE /* startscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startscreen@2x.png"; sourceTree = "<group>"; };
+		5B7200C717F907D90022D96B /* cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cash.png; sourceTree = "<group>"; };
+		5B7200C817F907D90022D96B /* debit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = debit.png; sourceTree = "<group>"; };
+		5B7200C917F907D90022D96B /* credit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit.png; sourceTree = "<group>"; };
+		5B7200CA17F907D90022D96B /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +434,10 @@
 		41F9F23217F8AC92000CD34D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B7200C717F907D90022D96B /* cash.png */,
+				5B7200C817F907D90022D96B /* debit.png */,
+				5B7200C917F907D90022D96B /* credit.png */,
+				5B7200CA17F907D90022D96B /* check.png */,
 				5B4FD7EB17F903A100D587EE /* startscreen.png */,
 				5B4FD7EC17F903A100D587EE /* startscreen@2x.png */,
 				5B06A77417F8EF160039BF42 /* cashierImage.png */,
@@ -835,8 +847,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7200CE17F907D90022D96B /* check.png in Resources */,
+				5B7200CC17F907D90022D96B /* debit.png in Resources */,
 				41F9F28617F8B3D7000CD34D /* QueryIcon.png in Resources */,
 				41F9F28A17F8B3D7000CD34D /* PaymentIcon.png in Resources */,
+				5B7200CB17F907D90022D96B /* cash.png in Resources */,
 				41F9F26B17F8ADAA000CD34D /* Lucida Grande.ttf in Resources */,
 				5B06A77717F8EF160039BF42 /* customerImage.png in Resources */,
 				41F9F29F17F8B73B000CD34D /* DrugsIcon.png in Resources */,
@@ -849,6 +864,7 @@
 				5B06A77617F8EF160039BF42 /* cashierImage.png in Resources */,
 				41F9F23617F8AC92000CD34D /* InfoPlist.strings in Resources */,
 				5B4FD7ED17F903A100D587EE /* startscreen.png in Resources */,
+				5B7200CD17F907D90022D96B /* credit.png in Resources */,
 				41F9F28817F8B3D7000CD34D /* WelcomeIcon.png in Resources */,
 				41F9F29C17F8B73B000CD34D /* AlcoholIcon.png in Resources */,
 				41F9F29D17F8B73B000CD34D /* BatteryIcon.png in Resources */,
