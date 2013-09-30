@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="mGY-U6-qYS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -163,11 +163,11 @@
             </objects>
             <point key="canvasLocation" x="4212" y="-821"/>
         </scene>
-        <!--Split View Controller - Welcome-->
+        <!--Split View Controller - Products-->
         <scene sceneID="Zex-fz-46Z">
             <objects>
                 <splitViewController id="tKc-pA-GD5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Welcome" image="WelcomeIcon.png" id="Bzc-Oc-6ip"/>
+                    <tabBarItem key="tabBarItem" title="Products" image="ProductIcon.png" id="Bzc-Oc-6ip"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="Tqs-xv-UpZ" kind="relationship" relationship="masterViewController" id="3Pe-jh-WAQ"/>
@@ -197,13 +197,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="49e-Tb-3d3" kind="push" id="eSb-61-wUi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8l-Kc-7qJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="734"/>
+            <point key="canvasLocation" x="928" y="290"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -217,20 +214,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tKc-pA-GD5" kind="relationship" relationship="viewControllers" id="7aK-Pu-bf2"/>
-                        <segue destination="PVQ-Dc-uWr" kind="relationship" relationship="viewControllers" id="54Y-VC-1fM"/>
-                        <segue destination="hUY-R4-k8V" kind="relationship" relationship="viewControllers" id="zZS-Vi-uEf"/>
-                        <segue destination="HgC-vG-6nN" kind="relationship" relationship="viewControllers" id="Lts-4y-bBl"/>
+                        <segue destination="PVQ-Dc-uWr" kind="relationship" relationship="viewControllers" id="gHR-cV-J1G"/>
+                        <segue destination="tKc-pA-GD5" kind="relationship" relationship="viewControllers" id="CJJ-fu-I7A"/>
+                        <segue destination="hUY-R4-k8V" kind="relationship" relationship="viewControllers" id="fU6-xw-3t5"/>
+                        <segue destination="HgC-vG-6nN" kind="relationship" relationship="viewControllers" id="tuV-ct-A3h"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981" y="718"/>
         </scene>
-        <!--View Controller - Products-->
+        <!--Welcome View Controller - Welcome-->
         <scene sceneID="NGD-nx-76f">
             <objects>
-                <viewController id="PVQ-Dc-uWr" sceneMemberID="viewController">
+                <viewController id="PVQ-Dc-uWr" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="heL-yC-Ev2"/>
                         <viewControllerLayoutGuide type="bottom" id="mT5-4u-TbY"/>
@@ -239,15 +236,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Welcome! My name is BlueDevil. How may I help you today?" translatesAutoresizingMaskIntoConstraints="NO" id="3lQ-0u-og2">
-                                <rect key="frame" x="149" y="155" width="563" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95109694752562624" green="0.9500379832756547" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Hi! I'm doing fine thank you! " translatesAutoresizingMaskIntoConstraints="NO" id="QVu-Zb-sD0">
-                                <rect key="frame" x="149" y="355" width="563" height="192"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Welcome to the Duke Gas Store!" translatesAutoresizingMaskIntoConstraints="NO" id="QVu-Zb-sD0">
+                                <rect key="frame" x="150" y="112" width="500" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97625693051334417" green="1" blue="0.95098780498136781" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -257,11 +247,7 @@
                                 <rect key="frame" x="42" y="192" width="73" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="customerImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="zcE-qr-uRv">
-                                <rect key="frame" x="42" y="414" width="73" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Duke Gas Station Store!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljO-Ij-fgp">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi! Welcome to Duke Gas Station Store!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljO-Ij-fgp">
                                 <rect key="frame" x="100" y="29" width="588" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
@@ -284,6 +270,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="fjN-PY-teh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-xG-fcE">
                                 <rect key="frame" x="240" y="689" width="268" height="42"/>
@@ -294,6 +283,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="PnS-RU-321"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83K-IN-Y1a">
                                 <rect key="frame" x="240" y="739" width="268" height="42"/>
@@ -304,6 +296,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="raN-Yy-WVQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1d-Jc-CuP">
                                 <rect key="frame" x="42" y="803" width="274" height="42"/>
@@ -314,6 +309,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="ImN-ZB-os5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-DZ-ohE">
                                 <rect key="frame" x="42" y="864" width="274" height="42"/>
@@ -324,6 +322,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="j3a-vP-Tru"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYw-Dn-wyz">
                                 <rect key="frame" x="352" y="864" width="133" height="42"/>
@@ -334,6 +335,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="2Rj-MN-8dn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB0-8A-zMA">
                                 <rect key="frame" x="352" y="802" width="133" height="42"/>
@@ -344,6 +348,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="puu-l0-wqA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIB-fq-dq8">
                                 <rect key="frame" x="553" y="689" width="159" height="92"/>
@@ -354,6 +361,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="b2g-0p-xpB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGl-at-r59">
                                 <rect key="frame" x="530" y="803" width="182" height="42"/>
@@ -364,6 +374,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="M4s-Bu-4zo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cl-Pm-qug">
                                 <rect key="frame" x="530" y="862" width="182" height="42"/>
@@ -374,6 +387,9 @@
                                     <color key="titleColor" red="0.33172422769999999" green="0.1865334874" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="qwB-p0-T0o"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your message here..." borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8N-yQ-1Gj">
                                 <rect key="frame" x="42" y="608" width="587" height="30"/>
@@ -388,24 +404,31 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="PVQ-Dc-uWr" eventType="touchUpInside" id="IdZ-yY-PtA"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line.png" translatesAutoresizingMaskIntoConstraints="NO" id="DwU-U3-2eB">
-                                <rect key="frame" x="35" y="536" width="695" height="131"/>
+                                <rect key="frame" x="53" y="555" width="695" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Products" image="ProductIcon.png" id="saC-TT-2Gh"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="WelcomeIcon.png" id="saC-TT-2Gh"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="QVu-Zb-sD0" id="I9w-E9-dIt"/>
+                        <outlet property="typeText" destination="O8N-yQ-1Gj" id="um1-Z6-h8e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3V-6b-Pes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3016" y="-476"/>
         </scene>
-        <!--View Controller - Payment-->
+        <!--Payment View Controller - Payment-->
         <scene sceneID="ERS-h8-hCg">
             <objects>
-                <viewController id="hUY-R4-k8V" sceneMemberID="viewController">
+                <viewController id="hUY-R4-k8V" customClass="PaymentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8tI-5I-xEc"/>
                         <viewControllerLayoutGuide type="bottom" id="iai-nB-quy"/>
@@ -414,15 +437,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Please select the payment mode." translatesAutoresizingMaskIntoConstraints="NO" id="VXk-9i-XF4">
-                                <rect key="frame" x="156" y="154" width="563" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95109694749999996" green="0.9500379833" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="I would like to pay by credit card please!" translatesAutoresizingMaskIntoConstraints="NO" id="Lt6-4Q-Lgv">
-                                <rect key="frame" x="156" y="354" width="563" height="192"/>
+                                <rect key="frame" x="150" y="120" width="500" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97625693049999995" green="1" blue="0.95098780500000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -432,11 +448,7 @@
                                 <rect key="frame" x="49" y="191" width="73" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="customerImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="cyM-8H-eLG">
-                                <rect key="frame" x="49" y="413" width="73" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Duke Gas Station Store!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J76-yW-Bak">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How would you like to pay?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J76-yW-Bak">
                                 <rect key="frame" x="97" y="31" width="588" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
@@ -463,6 +475,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="hUY-R4-k8V" eventType="touchUpInside" id="dWW-TC-jcV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy8-ud-NCT">
                                 <rect key="frame" x="41" y="680" width="152" height="151"/>
@@ -474,9 +489,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIp-qR-7cQ">
                                 <rect key="frame" x="293" y="725" width="108" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Credit" image="credit.png">
+                                <state key="normal" title="Credit Card" image="credit.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addText:" destination="hUY-R4-k8V" eventType="touchUpInside" id="KiI-xZ-KY7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-os-cQx">
                                 <rect key="frame" x="49" y="817" width="116" height="106"/>
@@ -501,11 +519,51 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="hUY-R4-k8V" eventType="touchUpInside" id="XdL-uW-Qo5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzn-rO-Zj1">
+                                <rect key="frame" x="68" y="738" width="98" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cash">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addText:" destination="hUY-R4-k8V" eventType="touchUpInside" id="XeK-6U-k1C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuy-95-19r">
+                                <rect key="frame" x="53" y="848" width="109" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Debit">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addText:" destination="hUY-R4-k8V" eventType="touchUpInside" id="qCX-CD-Fgi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fV1-i2-P4d">
+                                <rect key="frame" x="293" y="857" width="109" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cheque">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addText:" destination="hUY-R4-k8V" eventType="touchUpInside" id="gFN-BW-0jM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Payment" image="PaymentIcon.png" id="xTK-YT-KFI"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="Lt6-4Q-Lgv" id="Ghm-9s-7L1"/>
+                        <outlet property="typeText" destination="mGT-TT-b6q" id="1i5-Ux-zzT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4G-2y-cOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,18 +1,18 @@
 //
-//  SpeechViewController.m
-//  CommunicAidPhone
+//  WelcomeViewController.m
+//  Communicaid2
 //
 //  Created by Lee Yu Zhou on 29/9/13.
 //  Copyright (c) 2013 Lee Yu Zhou. All rights reserved.
 //
 
-#import "SpeechViewController.h"
+#import "WelcomeViewController.h"
 
-@interface SpeechViewController ()
-@property (strong, nonatomic) NSMutableArray *arrayOfTexts;
+@interface WelcomeViewController ()
+
 @end
 
-@implementation SpeechViewController
+@implementation WelcomeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,11 +30,11 @@
     self.messages = [NSMutableDictionary dictionary];
     self.configuration = [PNConfiguration defaultConfiguration];
     
-
     
-
     
-    SpeechViewController *weakSelf = self;
+    
+    
+    WelcomeViewController *weakSelf = self;
     
     [[PNObservationCenter defaultCenter] addClientConnectionStateObserver:self
                                                         withCallbackBlock:^(NSString *origin,
@@ -48,20 +48,20 @@
                                                          withBlock:^(PNMessage *message) {
                                                              
                                                              if (![[message.message substringToIndex:1] isEqualToString:@"*"]) {
-                                                             NSDateFormatter *dateFormatter = [NSDateFormatter new];
-                                                             dateFormatter.dateFormat = @"HH:mm:ss MM/dd/yy";
-                                                             
-                                                             PNChannel *channel = message.channel;
-                                                             NSString *messages = [weakSelf.messages valueForKey:channel.name];
-                                                             if (messages == nil) {
+                                                                 NSDateFormatter *dateFormatter = [NSDateFormatter new];
+                                                                 dateFormatter.dateFormat = @"HH:mm:ss MM/dd/yy";
                                                                  
-                                                                 messages = @"";
-                                                             }
-                                                             messages = [messages stringByAppendingFormat:@"%@\n",
-                                                                         message.message];
-                                                             [weakSelf.messages setValue:messages forKey:channel.name];
-                                                             
-                                    [self.messageTextField setText:messages];
+                                                                 PNChannel *channel = message.channel;
+                                                                 NSString *messages = [weakSelf.messages valueForKey:channel.name];
+                                                                 if (messages == nil) {
+                                                                     
+                                                                     messages = @"";
+                                                                 }
+                                                                 messages = [messages stringByAppendingFormat:@"%@\n",
+                                                                             message.message];
+                                                                 [weakSelf.messages setValue:messages forKey:channel.name];
+                                                                 
+                                                                 [self.messageTextField setText:messages];
                                                                  
                                                                  NSRange range = NSMakeRange(self.messageTextField.text.length - 1, 1);
                                                                  [self.messageTextField scrollRangeToVisible:range];//weakSelf.currentChannelChat = [weakSelf.messages valueForKey:weakSelf.currentChannel.name];
@@ -70,17 +70,6 @@
     
     
     [self connectToChannel];
-
-}
-@synthesize arrayOfTexts = _arrayOfTexts;
-- (NSMutableArray *)arrayOfTexts {
-    if (!_arrayOfTexts) {
-        _arrayOfTexts = [[NSMutableArray alloc]init];
-    }
-    return _arrayOfTexts;
-}
-- (void)setArrayOfTexts:(NSMutableArray *)arrayOfTexts
-{
 }
 
 -(void) connectToChannel{
@@ -121,17 +110,32 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)addText:(UIButton *)sender {
+    NSString *textToAdd = [NSString stringWithFormat:@"%@ ",[[sender titleLabel] text]];
+    NSString *text = [self.typeText text];
+    if ([text isEqualToString:@"Your message here..."]) {
+        text = @"";
+    }
+    NSString *finalString = [text stringByAppendingString:textToAdd];
+    self.typeText.text = finalString;
+    
 }
-
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self prepareForSpeech];
+}
+- (IBAction)sendMessage:(id)sender {
+    NSString *text = [self.typeText text];
+    if (![text isEqualToString:@"Your message here..."]) {
+        if (self.currentChannel != nil) {
+            [PubNub sendMessage:[NSString stringWithFormat:@"\"Customer: %@\"", text]
+                      toChannel:self.currentChannel];
+            self.typeText.text = @"Your message here...";
+        }
+    }
+    
 }
 
 - (void)prepareForSpeech {
@@ -169,15 +173,17 @@
     // Wake the audio components so there is minimal delay on the first request.
     [speechService prepare];
 }
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 # pragma mark - control turning
 
 - (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation{
     return NO;
 }
-
-
-
 - (IBAction)talkButton:(id)sender {
     NSLog(@"Starting speech request");
     
@@ -237,7 +243,7 @@
     // Load a website using the recognized text.
     // First make the recognizedText safe for use as a search term in a URL.
     if (self.currentChannel != nil) {
-        [PubNub sendMessage:[NSString stringWithFormat:@"\"Cashier: %@\"", recognizedText]
+        [PubNub sendMessage:[NSString stringWithFormat:@"\"%@\"", recognizedText]
                   toChannel:self.currentChannel];
     }
 }
@@ -261,7 +267,6 @@
                      otherButtonTitles: nil];
     [alert show];
 }
-
 
 #pragma mark -
 #pragma mark OAuth

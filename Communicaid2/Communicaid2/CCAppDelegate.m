@@ -113,7 +113,7 @@
     UITabBarController *tabBarController = [sb instantiateViewControllerWithIdentifier:@"TabBar"];
     self.window.rootViewController = tabBarController;
     
-    UISplitViewController *splitViewController = [tabBarController viewControllers][0];
+    UISplitViewController *splitViewController = [tabBarController viewControllers][1];
     CCDetailViewController *ccDetailViewController = [splitViewController.viewControllers lastObject];
     splitViewController.delegate = (id)ccDetailViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers firstObject];

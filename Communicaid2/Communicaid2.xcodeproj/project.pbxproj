@@ -103,6 +103,8 @@
 		41F9F4BA17F8E4C9000CD34D /* PNConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F48417F8E4C9000CD34D /* PNConnectionChannel.m */; };
 		41F9F4BC17F8E5DE000CD34D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */; };
 		41F9F4BE17F8E5E8000CD34D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F9F4BD17F8E5E8000CD34D /* libz.dylib */; };
+		41F9F4C117F922CB000CD34D /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F4C017F922CB000CD34D /* WelcomeViewController.m */; };
+		41F9F4C417F928E6000CD34D /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F9F4C317F928E6000CD34D /* PaymentViewController.m */; };
 		5B06A77617F8EF160039BF42 /* cashierImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B06A77417F8EF160039BF42 /* cashierImage.png */; };
 		5B06A77717F8EF160039BF42 /* customerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B06A77517F8EF160039BF42 /* customerImage.png */; };
 		5B497E4317F8DA5B002F120B /* CC_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */; };
@@ -328,6 +330,10 @@
 		41F9F48417F8E4C9000CD34D /* PNConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNConnectionChannel.m; sourceTree = "<group>"; };
 		41F9F4BB17F8E5DE000CD34D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41F9F4BD17F8E5E8000CD34D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		41F9F4BF17F922CB000CD34D /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		41F9F4C017F922CB000CD34D /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		41F9F4C217F928E6000CD34D /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		41F9F4C317F928E6000CD34D /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
 		5B06A77417F8EF160039BF42 /* cashierImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cashierImage.png; sourceTree = "<group>"; };
 		5B06A77517F8EF160039BF42 /* customerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customerImage.png; sourceTree = "<group>"; };
 		5B497E4117F8DA5B002F120B /* CC_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CC_Icon@2x.png"; sourceTree = "<group>"; };
@@ -423,6 +429,10 @@
 				41F9F23B17F8AC92000CD34D /* CCAppDelegate.m */,
 				41F9F26017F8ADA3000CD34D /* CCCell.h */,
 				41F9F26D17F8ADD2000CD34D /* Main.storyboard */,
+				41F9F4C317F928E6000CD34D /* PaymentViewController.m */,
+				41F9F4C217F928E6000CD34D /* PaymentViewController.h */,
+				41F9F4BF17F922CB000CD34D /* WelcomeViewController.h */,
+				41F9F4C017F922CB000CD34D /* WelcomeViewController.m */,
 				41F9F26117F8ADA3000CD34D /* CCCell.m */,
 				41F9F26217F8ADA3000CD34D /* CCMasterViewController.h */,
 				41F9F26317F8ADA3000CD34D /* CCMasterViewController.m */,
@@ -915,6 +925,7 @@
 				41F9F4B117F8E4C9000CD34D /* PNPushNotificationsRemoveRequest.m in Sources */,
 				41F9F49A17F8E4C9000CD34D /* PNDate.m in Sources */,
 				41F9F49617F8E4C9000CD34D /* PNResponseParser.m in Sources */,
+				41F9F4C417F928E6000CD34D /* PaymentViewController.m in Sources */,
 				41F9F26617F8ADA4000CD34D /* CCCell.m in Sources */,
 				41F9F49517F8E4C9000CD34D /* PNResponseDeserialize.m in Sources */,
 				41F9F4AC17F8E4C9000CD34D /* PNLatencyMeasureRequest.m in Sources */,
@@ -947,6 +958,7 @@
 				41F9F2A517F8B8EB000CD34D /* SpeechAuth.m in Sources */,
 				41F9F23F17F8AC92000CD34D /* Communicaid2.xcdatamodeld in Sources */,
 				41F9F48517F8E4C9000CD34D /* JSON.m in Sources */,
+				41F9F4C117F922CB000CD34D /* WelcomeViewController.m in Sources */,
 				41F9F4AD17F8E4C9000CD34D /* PNLeaveRequest.m in Sources */,
 				41F9F49217F8E4C9000CD34D /* PNHereNowResponseParser.m in Sources */,
 				41F9F48F17F8E4C9000CD34D /* PNChannelEventsResponseParser.m in Sources */,
